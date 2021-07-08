@@ -5,14 +5,38 @@ use Auth;
 use App\Models\Producto;
 use App\Models\User;
 use Carbon\Carbon;
-
+use Illuminate\Support\Facades\DB;
 
 class perfilEmpresa extends Controller
 {
     public function __construct(){
         Carbon::setlocale('es');
+
+        $fecha1 = now()->toDateString();
+        $sql = 'SELECT dias FROM users';
+        $exp =  DB::select($sql);
+
+        foreach($exp as $expi){
+            if($expi->dias==$fecha1){
+                $affected = DB::table('users')
+                ->where('id', $expi->id)
+                ->update(['rol_id' => 3]);
+            }      
+        }
     }
+
+  
     
+    public function expiracion(){
+        $fecha1 = now()->toDateString();
+        $user = Auth::all();
+
+        if($user->dias==$fecha1){
+            return 'hola';
+        }
+
+    }
+
     public function index()
     {
         if(Auth::guest()){

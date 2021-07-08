@@ -21,6 +21,7 @@ class CreateNewUser implements CreatesNewUsers
      */
     public function create(array $input)
     {
+        $fechaFin = Carbon::now()->addDays(7)->toDateString();
 
         Validator::make($input, [
             'name' => ['required', 'string', 'max:255', 'unique:users'],
@@ -34,7 +35,7 @@ class CreateNewUser implements CreatesNewUsers
             'email' => $input['email'],
             'ubicacion' => $input['ubicacion'],
             'rol_id' => 2,
-            'dias' => 7,
+            'dias' => $fechaFin,
             'descripcion' => 'Bienvenido a nuestra empresa.',    
             'telefono' => $input['telefono'],
             'nombreUser' => $input['nombreUser'],

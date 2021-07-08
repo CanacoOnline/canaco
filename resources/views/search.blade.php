@@ -76,10 +76,10 @@
 
                 <div class="panelGuardar flex lineaTopGris">
 
-                    <a href="{{route('getUserDetail', ['user_id' => $aux->user->id]) }}" class="divCenter hvrUnderline txtB">
+                    <a href="{{route('getUserDetail', ['user_id' => $aux->user->id]) }}" class="divCenter hvrUnderline txtB"> me escuchas? nope discord? xd jalo
                         Por: {{$aux->user->name}}
                     </a>
-
+                   
                     <a href="" class="wIcon divCenter">
                         <i class="far fa-heart txtB hvrOrange"></i>
                     </a>
