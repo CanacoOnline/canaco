@@ -1,0 +1,258 @@
+
+.contPerfil{
+    padding: 10px 10px 0 10px;
+
+    width: 100%;
+    display: grid;
+    grid-template: 
+    ".        .     usuario         usuario" 
+    "logoPerfil     logoPerfil      logoPerfil      logoPerfil"  auto
+    "tituloDesc    tituloDesc     .     ."  
+    "descripcion    descripcion     descripcion     descripcion" 
+    "tituloCont      .       .       .";
+    
+}
+
+.logoPerfil{
+    grid-area: logoPerfil;
+    background: #fff; 
+    padding-top: 15px;    
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template: 
+    "formPerfil" auto
+    "formInfo" auto
+    "formInfo2" auto;
+}
+
+.usuario{
+    grid-area: usuario;
+    display: flex;
+    justify-content: flex-end;
+
+}
+.tituloDesc{
+    grid-area: tituloDesc;
+    display: flex;
+    justify-content: left;
+    margin-top: 20px;
+}
+
+.descripcion{
+    grid-area: descripcion;
+    
+}
+.tituloCont{
+    grid-area: tituloCont;
+    display: flex;
+    justify-content: left;
+    margin-top: 20px;
+}
+.contenido{
+    grid-area: contenido;
+    justify-content: center;
+}
+.columnImage{
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+    padding:  0 5px 0 5px;
+    margin: 5px 2px 2px 2px;
+    background: #fff;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.columnImage img {
+    margin-top: 4px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  /* Perfil */
+.formPerfil{
+    grid-area: formPerfil;
+    position: relative;
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+}
+/*FORM TIPO 4 COLUMNAS*/
+.formInfo{
+    grid-area: formInfo;
+    display: grid;
+    grid-template: 
+    "web"
+    "face" 
+    "contacto" 
+    "tel";
+}
+.formInfo .web{
+    grid-area: web;
+}
+.formInfo .face{
+    grid-area: face;
+}
+.formInfo .contacto{
+    grid-area: contacto;
+}
+.formInfo .tel{
+    grid-area: tel;
+}
+.formInfo > div > p {
+    text-align: center;
+    padding: 15px;
+    color: #18455B;
+    font-size: 14px;
+
+}
+.formInfo a , .formInfo span{
+    color: #232425;
+    font-size: 12px;
+
+}
+.formInfo .tam,.formInfo2 .tam{
+    font-size: 18px;
+    padding-right: 5px;
+}
+
+/*FIN 4 COLUMNAS */
+
+/*FORM TIPO 3 COLUMNAS*/
+.formInfo2{
+    grid-area: formInfo2;
+    display: grid;
+    grid-template: 
+    "web"
+    "contacto" 
+    "tel";
+}
+.formInfo2 .web{
+    grid-area: web;
+}
+.formInfo2 .contacto{
+    grid-area: contacto;
+}
+.formInfo2 .tel{
+    grid-area: tel;
+}
+.formInfo2 > div > p {
+    text-align: center;
+    padding: 15px;
+    color: #18455B;
+    font-size: 14px;
+
+}
+.formInfo2 a , .formInfo2 span{
+    color: #232425;
+    font-size: 12px;
+
+}
+/*FIN 3 COLUMNAS*/
+
+.btnFoto{
+    position: absolute;
+    bottom:23px;
+    left: 50px;
+    font-size: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #FF8D00;
+    color: #FFFFFF;
+    text-align: center;
+    width: 100px;
+    padding: 5px;
+    cursor: pointer;
+    
+}
+.fotoPerfil{
+    width: 200px;
+    height: 200px; 
+    border-radius: 50%;
+}
+.nameUser{
+    font-size: 24px;
+    text-align: center;
+    color: #18455B;
+}
+
+.usuario a{
+    color:#18455B;
+    font-size: 18px;
+}
+.usuario li{
+    list-style: none;
+    outline: none;
+    display:block;
+    list-style: none;
+    margin: 5px;
+}
+.usuario span{
+    color: #FF8D00;
+}
+.usuario li a {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 5px;
+  }
+
+
+.tituloDesc h3, .tituloCont h3{
+    color:#FF8D00;
+    font-size: 18px;
+}
+
+.descripcion p, .contenido p{
+    font-size: 14px;
+    color: #18455B;
+}
+@media (min-width:700px) {
+    .columnImage{
+        -ms-flex: 49%;
+        flex: 49%;
+        max-width: 49%;
+    }
+}
+@media (min-width:995px) {
+    .contPerfil{padding: 30px 20px 0 20px;}
+    .formInfo{
+        grid-template: 
+        "web face contacto tel";
+        width: 70%;
+        margin: 20px auto;
+        
+    }
+    .formInfo .web, .formInfo .face, .formInfo .contacto{
+        border-top: 2px solid #ff8c00af;
+        border-right: 2px solid #ff8c00af;
+    }
+    .formInfo .tel{border-top: 2px solid #ff8c00af;}
+    
+    .formInfo2{
+        grid-template: 
+        "web contacto tel";
+        width: 70%;
+        margin: 20px auto;
+        
+    }
+    .formInfo2 .web, .formInfo2 .contacto{
+        border-top: 2px solid #ff8c00af;
+        border-right: 2px solid #ff8c00af;
+    }
+    .formInfo2 .tel{border-top: 2px solid #ff8c00af;}
+}
+@media (min-width:1050px) {
+    .contPerfil{padding: 30px 50px 0 50px;}
+}
+@media (min-width:1150px) {
+    .contPerfil{padding: 30px 100px 0 100px;}
+    .columnImage{
+        -ms-flex: 24%;
+        flex: 24%;
+        max-width: 24%;
+    }
+}
+@media (min-width:1275px) {
+    .contPerfil{padding: 30px 150px 0 150px;}
+}
+@media (min-width:1380px) {
+    .contPerfil{padding: 30px 200px 0 200px;}
+    
+}

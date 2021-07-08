@@ -1,0 +1,219 @@
+
+.contProductsMain{
+    display: grid;
+    grid-template: 
+    "leftPanel panelProducts"/120px auto;
+    margin-top: 10px;
+}
+/*Left Panel*/
+/*          */
+.leftPanel{
+    grid-area: leftPanel;
+}
+.leftPanel h1{
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #18455B;
+}
+.leftPanel .categorias{
+    display: flex;
+    justify-content: flex-start;
+}
+.leftPanel .categorias li, .leftPanel .orden p{
+    margin: 5px 0 5px 0;
+}
+.leftPanel .cate h1{
+    margin-top: 40px;
+}
+.leftPanel .categorias a, .leftPanel .orden p{
+    text-decoration: none;
+    color: #818677;
+    font-size: 12px;
+}
+/*              */
+/*Fin Left Panel*/
+
+
+/*Panel Productos*/
+/*               */
+.panelProducts{
+    grid-area: panelProducts;
+    display: flex;
+    display: -ms-flexbox;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.panelProducts .products{
+    position: relative;
+    flex: 100%;
+    max-width: 350px;
+    min-width: 300px;
+    background: #fff;
+    height: auto;
+    max-height: 480px;
+    margin: 0 10px 30px 10px;
+    border-radius: 10px;
+    box-shadow: 7px 7px 10px 2px rgba(0,0,0,0.2);
+    display:table-cell;
+    vertical-align:middle;
+}
+.products:hover{
+    box-shadow: 8px 8px 20px 10px #18455b59;
+    transition: all 0.5;
+    max-width: 360px;
+
+}
+.imagen{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    
+    display: flex;
+    align-items: center;
+}
+.datos{
+    grid-area: datos;
+}
+.panelProducts .products .datos{
+    margin-top: 10px;
+}
+.panelProducts .products .precio{
+    position: absolute;
+    z-index: 100;
+    top:0px;
+    left:0px;
+    color:#fff;
+    background:#18455B;
+    padding: 5px 10px 5px 10px;
+    border-top-left-radius: 10px;
+    font-size:14px;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.36);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.36);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.36);
+}
+.panelProducts .products .datos a{
+    text-decoration: none;
+    color: #1f1f1f;
+}
+.panelProducts .products .nombreP{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f1f1f;
+}
+.panelProducts .products .imagen{
+    display:table-cell;
+    vertical-align:middle;
+}
+.panelProducts .products .desc{
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.panelProducts .products .nombreE{
+    font-size: 12px;
+    color: #818677;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+}
+.panelProducts .products .datos p{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+/*                   */
+/*Fin Panel Productos*/
+
+/*Botones Productos*/
+/*                 */
+.btn-Editar, .btn-Eliminar{
+    position: absolute;
+    bottom: 5px;
+    text-decoration: none;
+    border-radius: 3px;
+    color: #fff;
+    padding: 2px 4px 2px 4px;
+}
+.btn-Editar{
+    right: 80px;
+    background: #18455B;
+
+}
+.btn-Eliminar{
+    right: 10px;
+    background: red;
+
+}
+.dir{
+    font-size: 18px;
+    color: #fff;
+    background: #18455B;
+    padding: 10px;
+    height: 50px;
+    flex: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dir li{
+    display: block;
+    
+    float: left;
+}
+.dir li, .dir a{
+    text-decoration: none;
+    margin: 0 5px;
+}
+.dir a{
+    color: #818677;
+}
+/*                    */
+/*Fin Botones Productos*/
+
+/** Tamaños **/
+@media (max-width:850px) {
+    .panelProducts .products{
+        flex: 49%;
+        height: auto;
+    }
+    
+}
+@media (min-width:995px) {
+    .contProductsMain{
+        display: grid;
+        grid-template: 
+        "leftPanel panelProducts"/ 250px 1fr auto;
+    }
+    .panelProducts .products{
+        flex: 40%;
+        height: auto;
+        margin: 0 5px 30px 0;
+        
+    }
+    .panelProducts{
+        justify-content: space-between;
+    }
+}
+@media (min-width:1050px) {
+    .panelProducts .products{
+        flex: 40%;
+        height: auto;
+    }
+}
+@media (min-width:1150px) {
+    .panelProducts .products{
+        flex: 40%;
+    }
+}
+@media (min-width:1275px) {
+    .panelProducts .products{
+        flex: 40%;
+    }
+}
+@media (min-width:1380px) {
+    .panelProducts .products{
+        flex: 25%;
+    }
+}

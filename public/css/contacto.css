@@ -1,0 +1,49 @@
+
+.formContacto{
+    width: 450px;
+    height: 330px;
+    margin: 150px auto;
+    background: #18455ba1;
+    padding:10px 20px;
+    box-sizing: border-box;
+    border-radius: 7px; 
+    z-index: 500;
+}
+.tituloContacto{
+    color:#fff;
+    text-align: center;
+    margin: 0px;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.eti{
+    color: #fff;
+    font-size: 14px;
+    text-align: justify;
+    width: 70%;
+    margin: auto;
+}
+
+.mod{
+    text-decoration: none;
+    color: #FF8D00;
+    font-size: 16px;
+}
+.texto{
+    color: #fff;
+    font-size: 14px;
+    padding-left: 20px;
+}
+.iconTam{
+    font-size: 18px;
+    padding: 5px;
+    margin-right: 10px;
+}
+.imgFondo{
+    position: absolute;
+    margin: 150px auto;
+}
+.main img{
+    width: 450px;
+    
+}
