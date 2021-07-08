@@ -21,8 +21,7 @@
 
             <div class="slide ">
                 <a href="#">
-                    <img
-                        src="images\banner\1.png">
+                    <img src="images\banner\1.png">
                 </a>
             </div>
 
@@ -47,14 +46,29 @@
     <?php echo $__env->make('destacado.topServicios', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <?php echo $__env->make('destacado.topPromociones', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <?php echo $__env->make('destacado.topCupones', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-    
+
     </div>
     <h2 class="tamMediano txtGray">Patrocinadores</h2>
     <div class='sliderPatro marB20' id="sliderPatro">
-        <img src="images\LogosSueltos\DOS NACIONES.jpeg" />
-        <img src="images\LogosSueltos\logo la sonora de nog.jpeg" />
-        <img src="images\LogosSueltos\DOS NACIONES.jpeg" />
-        <img src="images\LogosSueltos\logo la sonora de nog.jpeg" />
+        <div class="bg-white sostener">
+            <img src="images\LogosSueltos\DOS NACIONES.jpeg" class="wFull"/>
+        </div>
+        <div class="bg-white sostener">
+            <img src="images\LogosSueltos\logo la sonora de nog.jpeg"  class="wFull"/>
+        </div>
+        <div class="bg-white sostener">
+            <img src="images\LogosSueltos\graficos.png"  class="wFull"/>
+        </div>
+        <div class="bg-white sostener">
+            <img src="images\LogosSueltos\DOS NACIONES.jpeg"  class="wFull"/>
+        </div>
+        <div class="bg-white sostener">
+            <img src="images\LogosSueltos\logo la sonora de nog.jpeg"  class="wFull"/>
+        </div>
+        <div class="bg-white sostener">
+            <img src="images\LogosSueltos\graficos.png"  class="wFull"/>
+        </div>
+
     </div>
 
     <!-- Scripts -->
