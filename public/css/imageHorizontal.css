@@ -10,6 +10,8 @@
 .sostener {
     width: 255px;
     height: 255px;
+    min-width: 255px;
+    min-height: 255px;
     margin: 5px;
 }
 
