@@ -58,7 +58,9 @@
         </div>
         <div class="detalleInfo mar10 pad20 rel">
             <h1 class="txtB tam36 bold600">{{$producto->title}}</h1>
+            @if($producto->precio!=null)
             <h3 class="bold200 tam18">$ {{$producto->precio}}</h3>
+            @endif
             @if($producto->description!=null)
             <p class="marT20 tam14">{{$producto->description}}</p>
             @endif

@@ -63,7 +63,9 @@
         </div>
         <div class="detalleInfo mar10 pad20 rel">
             <h1 class="txtB tam36 bold600"><?php echo e($producto->title); ?></h1>
+            <?php if($producto->precio!=null): ?>
             <h3 class="bold200 tam18">$ <?php echo e($producto->precio); ?></h3>
+            <?php endif; ?>
             <?php if($producto->description!=null): ?>
             <p class="marT20 tam14"><?php echo e($producto->description); ?></p>
             <?php endif; ?>

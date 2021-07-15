@@ -6,7 +6,7 @@
 <?php $component->withAttributes([]); ?>
     <main class="marTB10">
         <h2 class="tamMediano txtGray">Empresas participantes</h2>
-        <div class="divCenter  flex wrap gap10">
+        <div class="divCenter flex wrap gap10">
 
             <div class="bg-white h250 borde5 boxShadow">
                 <div class="panelNormal borde5 h225 lineaBot flex align-items-center">
@@ -102,7 +102,7 @@
                     <?php endif; ?>
                    
                 </div>
-                <p class="txtCenter txtB tam14"><?php echo e($usuarios->name); ?></p>
+                <a href="<?php echo e(route('getUserDetail', ['user_id' => $usuarios->id])); ?>"><p class="txtCenter txtB tam14"><?php echo e($usuarios->name); ?></p></a>
             </div>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>

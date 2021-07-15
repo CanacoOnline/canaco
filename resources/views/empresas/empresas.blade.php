@@ -97,7 +97,7 @@
                     @endif
                    
                 </div>
-                <p class="txtCenter txtB tam14">{{$usuarios->name}}</p>
+                <a href="{{route('getUserDetail', ['user_id' => $usuarios->id]) }}"><p class="txtCenter txtB tam14">{{$usuarios->name}}</p></a>
             </div>
             @endforeach
         </div>

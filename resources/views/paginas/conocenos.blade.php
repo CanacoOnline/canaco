@@ -6,10 +6,11 @@
                 <source src="{{ asset('videos/CANACONLINE VIDEO.mp4') }}" type="video/mp4">
                 Your browser does not support HTML video.
             </video>
-            <p style="text-align: justify;" class="frm50">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Aperiam officia quidem, quae minima, sit quia
-                quis eligendi accusamus eos dignissimos, eum praesentium laborum provident nesciunt nihil cum
-                reprehenderit. Cumque magnam delectus architecto.</p>
+            <p style="text-align: justify;" class="frm50">A través de nuestra Cámara las empresas pueden contar con una
+                comunicación confiable y representativa ante distintas autoridades gubernamentales y privadas; la
+                defensa y promoción de los intereses del comercio, la industria y los servicios; así como capacitaciones
+                constantes, bolsa de trabajo y publicidad a su empresa.
+            </p>
         </div>
         <div class="flex wrap divCenter gap10 align-items-center">
             <p style="text-align: justify;" class="frm50 ">CANACO SERVyTUR Nogales es un organismo no gubernamental y

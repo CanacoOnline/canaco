@@ -61,7 +61,58 @@
                 @else
                 <nav class="menu txtCenter padT10">
                     @if (Auth::user()->rol_id == 1)
-                    <li class="pad5"><a class="hvrUnderline txtW" href="/admin">{{ Auth::user()->name }}</a></li>
+                    <x-jet-dropdown allign="right" width="48">
+                        <x-slot name="trigger">
+                            <button type="button" class="focus:outline-none transition bgNone">
+                                @if( Auth::user()->profile_photo_path!=null)
+                                <img class="h-12 w-12 rounded-full object-cover"
+                                    src="/storage/{{Auth::user()->profile_photo_path}}"
+                                    alt="{{ Auth::user()->name }}" />
+                                @else
+                                <img class="h-12 w-12 rounded-full object-cover" src="{{ asset('images\avatar.png') }}"
+                                    alt="{{ Auth::user()->name }}" />
+                                @endif
+                            </button>
+
+                            <p class="txtW tam14 hand ">{{ Auth::user()->name }}</p>
+
+                        </x-slot>
+
+                        <x-slot name="content">
+                            <!-- Account Management -->
+                            <div class="block px-4 py-2 text-xs text-gray-400">
+                                {{ __('Administrar Cuenta') }}
+                            </div>
+
+                            <x-jet-dropdown-link href="{{ route('empresa') }}">
+                                <i class="fas fa-user txtB"></i>{{ __(' Perfil') }}
+                            </x-jet-dropdown-link>
+                            <x-jet-dropdown-link href="/user/profile">
+                                <i class="fas fa-user-edit"></i>{{ __(' Editar Perfil') }}
+                            </x-jet-dropdown-link>
+
+                            <x-jet-dropdown-link href="/subirProducto">
+                                <i class="fas fa-upload txtB"></i>{{ __(' Subir Producto') }}
+                            </x-jet-dropdown-link>
+
+                            @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
+                            <x-jet-dropdown-link href="{{ route('api-tokens.index') }}">
+                                {{ __('API Tokens') }}
+                            </x-jet-dropdown-link>
+                            @endif
+                            <div class="border-t border-gray-100"></div>
+
+                            <!-- Authentication -->
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+
+                                <x-jet-dropdown-link href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                            this.closest('form').submit();">
+                                    <i class="fas fa-sign-out-alt txtB"></i>{{ __(' Cerrar sesión') }}
+                                </x-jet-dropdown-link>
+                            </form>
+                        </x-slot>
+                    </x-jet-dropdown>
                     @endif
 
                     @if (Auth::user()->rol_id == 2)
@@ -120,7 +171,48 @@
 
                     @endif
                     @if (Auth::user()->rol_id == 3)
-                    <li class="pad5"><a class="hvrUnderline txtW" href="/consumidor">{{ Auth::user()->name }}</a></li>
+                    <x-jet-dropdown allign="right" width="48">
+                        <x-slot name="trigger">
+                            <button type="button" class="focus:outline-none transition bgNone">
+                                @if( Auth::user()->profile_photo_path!=null)
+                                <img class="h-12 w-12 rounded-full object-cover"
+                                    src="/storage/{{Auth::user()->profile_photo_path}}"
+                                    alt="{{ Auth::user()->name }}" />
+                                @else
+                                <img class="h-12 w-12 rounded-full object-cover" src="{{ asset('images\avatar.png') }}"
+                                    alt="{{ Auth::user()->name }}" />
+                                @endif
+                            </button>
+
+                            <p class="txtW tam14 hand ">{{ Auth::user()->name }}</p>
+
+                        </x-slot>
+
+                        <x-slot name="content">
+                            <!-- Account Management -->
+                            <div class="block px-4 py-2 text-xs text-gray-400">
+                                {{ __('Administrar Cuenta') }}
+                            </div>
+
+                            <x-jet-dropdown-link href="{{ route('empresa') }}">
+                                <i class="fas fa-user txtB"></i>{{ __(' Perfil') }}
+                            </x-jet-dropdown-link>
+                            <x-jet-dropdown-link href="/user/profile">
+                                <i class="fas fa-user-edit"></i>{{ __(' Editar Perfil') }}
+                            </x-jet-dropdown-link>
+                            <div class="border-t border-gray-100"></div>
+
+                            <!-- Authentication -->
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+
+                                <x-jet-dropdown-link href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                            this.closest('form').submit();">
+                                    <i class="fas fa-sign-out-alt txtB"></i>{{ __(' Cerrar sesión') }}
+                                </x-jet-dropdown-link>
+                            </form>
+                        </x-slot>
+                    </x-jet-dropdown>
                     @endif
                 </nav>
                 @endif

@@ -10,7 +10,7 @@
         <main class="boxShadowLight marT10">
             <div class="bgB flex">
                 <?php if(Auth::user()->dias<=7): ?> <div class="tamNormal">
-                    <p class="txtW pad10">Su membrecia esta a punto de expirar. Dias restantes: <?php echo e(Auth::user()->dias); ?>
+                    <p class="txtW pad10">Su membrecia esta a punto de expirar. Expirará el día: <?php echo e(Auth::user()->dias); ?>
 
                     </p>
             </div>
@@ -21,11 +21,13 @@
                         <i class="fas fa-user txtO"></i>
                     </a>
                 </li>
+                <?php if(Auth::user()->rol_id != 3): ?>
                 <li>
                     <a class="hvrUnderline txtW pad5 marT5" href="/subirProducto"> Subir Producto
                         <i class="fas fa-upload txtO"></i>
                     </a>
                 </li>
+                <?php endif; ?>
                 <li>
                     <a class="hvrUnderline txtW pad5 marT5" href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">

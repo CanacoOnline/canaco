@@ -160,6 +160,8 @@ class subirController extends Controller
 
     public function getUserDetail($user_id){
         $usuario = User::find($user_id);
+        $usuario->visitas =  $usuario->visitas + 1;
+        $usuario->save();
         $productos = Producto::orderBy('id')->paginate(18);
         return view('cuenta.perfil', array(
             'usuario' => $usuario,

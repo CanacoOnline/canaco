@@ -508,7 +508,7 @@ span{outline: none;text-decoration: none;}
     "detalleInfo detalleImg detalleImg"
     "detalleFooter detalleFooter detalleFooter" /400px 1fr 1fr;
 }
-.cont450{width: 450px; height: 450px;margin:auto;
+.cont450{width: 450px;margin:auto;
 	text-align:center;}
 .detalleDescripcion{grid-area: detalleDescripcion;}
 .detalleHeader{grid-area: detalleHeader;}

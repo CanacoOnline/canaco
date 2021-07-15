@@ -51,7 +51,7 @@
     <h2 class="tamMediano txtGray">Patrocinadores</h2>
     <div class='sliderPatro marB20' id="sliderPatro">
         <div class="bg-white sostener contCenter">
-            <img src="images\LogosSueltos\DOS NACIONES.jpeg" class="wFull"/>
+            <a href="https://www.dosnaciones.com.mx/" target="_blank"><img src="images\LogosSueltos\DOS NACIONES.jpeg" class="wFull"/></a>
         </div>
         <div class="bg-white sostener contCenter">
             <img src="images\LogosSueltos\logo la sonora de nog.jpeg"  class="wFull"/>

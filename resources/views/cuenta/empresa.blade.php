@@ -5,7 +5,7 @@
         <main class="boxShadowLight marT10">
             <div class="bgB flex">
                 @if(Auth::user()->dias<=7) <div class="tamNormal">
-                    <p class="txtW pad10">Su membrecia esta a punto de expirar. Dias restantes: {{Auth::user()->dias}}
+                    <p class="txtW pad10">Su membrecia esta a punto de expirar. Expirará el día: {{Auth::user()->dias}}
                     </p>
             </div>
             @endif
@@ -15,11 +15,13 @@
                         <i class="fas fa-user txtO"></i>
                     </a>
                 </li>
+                @if(Auth::user()->rol_id != 3)
                 <li>
                     <a class="hvrUnderline txtW pad5 marT5" href="/subirProducto"> Subir Producto
                         <i class="fas fa-upload txtO"></i>
                     </a>
                 </li>
+                @endif
                 <li>
                     <a class="hvrUnderline txtW pad5 marT5" href="{{ route('logout') }}" onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">

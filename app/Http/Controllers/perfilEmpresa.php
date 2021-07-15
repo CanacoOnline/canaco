@@ -46,6 +46,10 @@ class perfilEmpresa extends Controller
             $productos = Producto::orderBy('id')->paginate(18);
             return view('cuenta.empresa',compact('productos'));
         }
+        if (Auth::user()->rol_id == 3) {
+            $productos = Producto::orderBy('id')->paginate(18);
+            return view('cuenta.empresa',compact('productos'));
+        }
         else{
             return redirect('login');
         }
@@ -57,7 +61,7 @@ class perfilEmpresa extends Controller
         $promociones = Producto::orderBy('visitas','desc')->where('tipo','Promocion')->take(5)->get();
         $cupones = Producto::orderBy('visitas','desc')->where('tipo','Cupon')->take(5)->get();
 
-        $usuario = User::orderBy('visitas')->get()->take(5);
+        $usuario = User::orderBy('visitas', 'desc')->get()->take(5);
 
         
 
