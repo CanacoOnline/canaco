@@ -1,7 +1,7 @@
 <h2 class="tamMediano txtGray marT10">Servicios más visitados</h2>
 <main class="w100 txtCenter">
     <div class="rankingProducts gap10 rel txtCenter">
-        @foreach($productos as $aux)
+        @foreach($servicios as $aux)
         @if($aux->tipo=='Servicio')
         <div class="bg-white panelNormal rel bordeTL minW225">
             @if(Storage::disk('images')->has($aux->image))

@@ -60,13 +60,28 @@
             <img src="images\LogosSueltos\graficos.png"  class="wFull"/>
         </div>
         <div class="bg-white sostener contCenter">
-            <img src="images\LogosSueltos\DOS NACIONES.jpeg"  class="wFull"/>
+            <img src="images\LogosSueltos\nuevoDia.png"  class="wFull"/>
         </div>
         <div class="bg-white sostener contCenter">
-            <img src="images\LogosSueltos\logo la sonora de nog.jpeg"  class="wFull"/>
+            <img src="images\LogosSueltos\elDiario.png"  class="wFull"/>
         </div>
         <div class="bg-white sostener contCenter">
-            <img src="images\LogosSueltos\graficos.png"  class="wFull"/>
+            <img src="images\LogosSueltos\zoom.png"  class="wFull"/>
+        </div>
+        <div class="bg-white sostener contCenter">
+            <img src="images\LogosSueltos\TONO.jpeg"  class="wFull"/>
+        </div>
+        <div class="bg-white sostener contCenter">
+            <img src="images\LogosSueltos\mas1.png"  class="wFull"/>
+        </div>
+        <div class="bg-white sostener contCenter">
+            <img src="images\LogosSueltos\mas2.png"  class="wFull"/>
+        </div>
+        <div class="bg-white sostener contCenter">
+            <img src="images\LogosSueltos\mas3.png"  class="wFull"/>
+        </div>
+        <div class="bg-white sostener contCenter">
+            <img src="images\cactus.jpg"  class="wFull"/>
         </div>
     </div>
 

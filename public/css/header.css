@@ -1,15 +1,5 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-body{
-    font-family: 'Montserrat', sans-serif;
-    background:#E7E7E7;
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 
 /* ------------------------- */
@@ -17,21 +7,14 @@ body{
 /* ------------------------- */
 .header{
     grid-area: header;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 100%;
     z-index: 2005;
     display: grid;
-    background: #18455B;
     grid-template: 
     "menuBar  logoMerca      logoMerca      logoCanaco" 50px
     "buscar buscar  buscar  buscar" 30px
     "categorias categorias  categorias  categorias" 35px/1fr 1fr 1fr 1fr;
     max-height: 130px;
-    flex: 0 0 auto;
-
-    
-    
+    flex: 0 0 auto; 
 }
 
 #menu-bar{
@@ -45,23 +28,30 @@ header label {
     cursor: pointer;
     color: #fff;
 }
-
+.submenu{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width: 40%;
+    height: 100vh;
+    padding: 20px;
+    background: #18455B;
+}
 .menu {
     position: absolute;
-    top: 80px;
-    left: 0;
+    top: 50px;
+    left: 0px;
     width: 100%;
     height: 100vh;
-    background: #18455B;
+    background:#232425d0;
     transition: all 0.5s;
     transform: translateX(-100%);
     z-index: 50000;
+   
 }
 .iconMenu{
     display: flex;
     grid-area: menuBar;
-    align-items: center;
-    justify-content: center;
 }
 
 .logoMerca{
@@ -321,11 +311,16 @@ header label {
 @media (min-width:995px) {
   
     .header{
-        padding-left: 20px;
-        padding-right: 20px;
         grid-template: 
         "logoMerca  buscar     buscar menuBar     logoCanaco" 50px
         "logoMerca categorias  categorias  menuBar logoCanaco  " 60px/ 1fr 1fr 1fr 1fr 0.5fr;
+    }
+    .submenu{
+        display:flex;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        background: none;
     }
     .logoCanaco img{
         width: 140px;
@@ -349,6 +344,7 @@ header label {
       transform: translateX(0%);
       float: right;
       display: flex;
+      background: none;
     }
 
     /* categorias */
@@ -368,20 +364,20 @@ header label {
 
 }
 @media (min-width:1050px) {
-    .header,.main,.contMain{padding-left: 50px;padding-right: 50px;}
+    .main,.contMain{padding-left: 50px;padding-right: 50px;}
     .panelObjetivo{right: 50px;}
     
 }
 @media (min-width:1150px) {
-    .header,.main,.contMain{padding-left: 100px;padding-right: 100px;}
+    .main,.contMain{padding-left: 100px;padding-right: 100px;}
     .panelObjetivo{right: 100px;}
     .mySlides img {max-height: 350px;}
 }
 @media (min-width:1275px) {
-    .header,.main,.contMain{padding-left: 150px;padding-right: 150px;}
+    .main,.contMain{padding-left: 150px;padding-right: 150px;}
 }
 @media (min-width:1380px) {
-    .header,.main,.contMain{padding-left: 200px;padding-right: 200px;}
+    .main,.contMain{padding-left: 200px;padding-right: 200px;}
 
     .imgPromo{height: 550px;}
 

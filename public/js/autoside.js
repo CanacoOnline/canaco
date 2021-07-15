@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
         if (aux==true) {
             flavoursContainer.scrollTo(flavoursContainer.scrollLeft + 1, 0);
             cont++;
-            if(cont >= 500){
+            if(cont >= 1500){
                 aux=false;
             }
         }

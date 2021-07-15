@@ -16,13 +16,13 @@ class perfilEmpresa extends Controller
         $sql = 'SELECT dias FROM users';
         $exp =  DB::select($sql);
 
-        foreach($exp as $expi){
-            if($expi->dias==$fecha1){
-                $affected = DB::table('users')
-                ->where('id', $expi->id)
-                ->update(['rol_id' => 3]);
-            }      
-        }
+        // foreach($exp as $expi){
+        //     if($expi->dias==$fecha1){
+        //         $affected = DB::table('users')
+        //         ->where('id', $expi->id)
+        //         ->update(['rol_id' => 3]);
+        //     }      
+        // }
     }
 
   
@@ -52,11 +52,16 @@ class perfilEmpresa extends Controller
     }
     
     public function ranking(){
-        $productos = Producto::orderBy('visitas')->get()->take(5);
+        $productos = Producto::orderBy('visitas','desc')->where('tipo','Producto')->take(5)->get();
+        $servicios = Producto::orderBy('visitas','desc')->where('tipo','Servicio')->take(5)->get();
+        $promociones = Producto::orderBy('visitas','desc')->where('tipo','Promocion')->take(5)->get();
+        $cupones = Producto::orderBy('visitas','desc')->where('tipo','Cupon')->take(5)->get();
+
         $usuario = User::orderBy('visitas')->get()->take(5);
 
         
-        return view('welcome',compact('productos','usuario'));
+
+        return view('welcome',compact('productos','usuario','servicios','promociones','cupones'));
     }
 
     public function perfil(){

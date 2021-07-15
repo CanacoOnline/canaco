@@ -1,7 +1,7 @@
 <h2 class="tamMediano txtGray marT10">Cupones más visitados</h2>
 <main class="w100 txtCenter">
     <div class="rankingProducts gap10 rel txtCenter">
-        <?php $__currentLoopData = $productos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $aux): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <?php $__currentLoopData = $cupones; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $aux): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <?php if($aux->tipo=='Cupon'): ?>
         <div class="bg-white panelNormal rel bordeTL minW225">
             <?php if(Storage::disk('images')->has($aux->image)): ?>

@@ -55,21 +55,23 @@
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 
-    <div class="contenedor">
-        <header class="header">
+    <div class="contenedor bg-blue">
+        <header class="header hojaNormal">
             <div class="iconMenu">
                 <input type="checkbox" id="menu-bar">
                 <label for="menu-bar"><i class="fas fa-bars "></i></label>
-
                 <!-- Authentication Links -->
                 <?php if(Auth::guest()): ?>
-                <nav class="menu">
-                    <li class="pad5"><a class="hvrUnderline txtW" href="<?php echo e(route('login')); ?>">Ingresar</a></li>
-                    <li class="pad5"><a class="hvrUnderline txtW" href="<?php echo e(route('register')); ?>">Registrarse</a></li>
-                    <li class="pad5"><a class="hvrUnderline txtW" href="/conocenos">Conocenos</a></li>
+                <nav class="menu w100">
+                    <div class="submenu txtCenter">
+                        <li class="pad5"><a class="hvrUnderline txtW" href="<?php echo e(route('login')); ?>">Ingresar</a></li>
+                        <li class="pad5"><a class="hvrUnderline txtW" href="<?php echo e(route('register')); ?>">Registrarse</a>
+                        </li>
+                        <li class="pad5"><a class="hvrUnderline txtW" href="/conocenos">Conocenos</a></li>
+                    </div>
                 </nav>
                 <?php else: ?>
-                <nav class="menu contCenter">
+                <nav class="menu txtCenter padT10">
                     <?php if(Auth::user()->rol_id == 1): ?>
                     <li class="pad5"><a class="hvrUnderline txtW" href="/admin"><?php echo e(Auth::user()->name); ?></a></li>
                     <?php endif; ?>
@@ -82,14 +84,13 @@
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php $component->withAttributes(['allign' => 'right','width' => '48']); ?>
                          <?php $__env->slot('trigger'); ?> 
-                            <button type="button" class="focus:outline-none transition divCenter bgNone">
+                            <button type="button" class="focus:outline-none transition bgNone">
                                 <?php if( Auth::user()->profile_photo_path!=null): ?>
                                 <img class="h-12 w-12 rounded-full object-cover"
                                     src="/storage/<?php echo e(Auth::user()->profile_photo_path); ?>"
                                     alt="<?php echo e(Auth::user()->name); ?>" />
                                 <?php else: ?>
-                                <img class="h-12 w-12 rounded-full object-cover"
-                                    src="<?php echo e(asset('images\avatar.png')); ?>"
+                                <img class="h-12 w-12 rounded-full object-cover" src="<?php echo e(asset('images\avatar.png')); ?>"
                                     alt="<?php echo e(Auth::user()->name); ?>" />
                                 <?php endif; ?>
                             </button>
@@ -225,17 +226,17 @@
             <ul class="nav">
                 <div class="categorias">
                     <!-- Comercio -->
-                    
+
                     <li class="pad5"><a class="hvrUnderline tamNormal" href="/empresas-participantes">Empresas
                             participantes</a></li>
-                         
+
                     <li class="pad5"><a class="hvrUnderline tamNormal" href="/promociones">Promociones</a></li>
                     <li class="pad5"><a class="hvrUnderline tamNormal" href="/cupones">Cupones</a></li>
                 </div>
             </ul>
 
         </header>
-        <div class="hehe"></div>
+
     </div>
 
     <!-- Page Content -->

@@ -3,7 +3,7 @@
 .contLogin{
     width: 350px;
     display: grid;
-    margin: 100px auto;
+    margin: 10px auto;
     grid-template:
     "panelPrimario panelPrimario" auto
     "panelSecundario panelSecundario" auto;

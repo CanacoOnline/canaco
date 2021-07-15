@@ -7,14 +7,6 @@
     <main class="marTB10">
         <h2 class="tamMediano txtGray">Empresas participantes</h2>
         <div class="divCenter  flex wrap gap10">
-            <div class="bg-white h250 borde5 boxShadow">
-                <div class="panelNormal borde5 h225 lineaBot flex align-items-center">
-                    <a href="/canaco">
-                        <img class="maxH225" src="<?php echo e(asset('images/CANACO/WhatsAppImage2021-01-15at12.06.03PM.jpeg')); ?>"
-                            alt="" style="width:100%">
-                    </a>
-                </div>
-            </div>
 
             <div class="bg-white h250 borde5 boxShadow">
                 <div class="panelNormal borde5 h225 lineaBot flex align-items-center">
@@ -93,14 +85,6 @@
                 <div class="panelNormal borde5 h225 lineaBot flex align-items-center">
                     <a href="">
                         <img class="maxH225" src="<?php echo e(asset('images\LogosSueltos\cempa.jpeg')); ?>" alt=""
-                            style="width:100%">
-                    </a>
-                </div>
-            </div>
-            <div class="bg-white h250 borde5 boxShadow">
-                <div class="panelNormal borde5 h225 lineaBot flex align-items-center">
-                    <a href="">
-                        <img class="maxH225" src="<?php echo e(asset('images\LogosSueltos\electronica jaramillo.JPG')); ?>" alt=""
                             style="width:100%">
                     </a>
                 </div>
